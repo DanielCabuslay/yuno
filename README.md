@@ -4,3 +4,5 @@ Yuno is a mini project consisting of HTML, CSS, JavaScript and JSON. The goal of
 Material Components utilized: Cards, Layout grid, Dialogs, Drawer, Buttons.
 Phone images taken from [GSMArena](http://www.gsmarena.com/).
 Store image logos taken from their respective Wikipedia pages.
+
+![Image of Yuno](http://orig03.deviantart.net/309b/f/2013/218/8/e/mirai_nikki_png_by_bloomsama-d6c2ljw.png)
