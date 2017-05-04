@@ -1,0 +1,25 @@
+{
+  "short_name": "Phones",
+  "name": "Phones for You",
+  "icons": [
+    {
+      "src": "favicon-128.png",
+	  "type": "image/png",
+	  "sizes": "128x128"
+    },
+    {
+      "src": "favicon-144.png",
+	  "type": "image/png",
+	  "sizes": "144x144"
+    },
+    {
+      "src": "favicon.png",
+      "sizes": "196x196",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#5c6bc0",
+  "background_color": "#fafafa",
+  "start_url": "index.html",
+  "display": "standalone"
+}

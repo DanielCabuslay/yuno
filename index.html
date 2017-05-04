@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Phones for you</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/store-buttons.css">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="shortcut_icon" href="favicon.png">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#00BCD4">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  </head>
+  <body class="mdc-typography demo-body">
+    <div class="mdc-toolbar mdc-toolbar--fixed">
+      <div class="mdc-toolbar__row">
+        <section class="mdc-toolbar__section mdc-toolbar__section--align-start">
+          <span class="mdc-toolbar__title">Phones for You</span>
+        </section>
+      </div>
+    </div>
+
+    <main class="demo-main mdc-toolbar-fixed-adjust">
+      <div id="card-grid" class="mdc-layout-grid">
+        <div class="demo-cell mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+          <p class="mdc-typography--body1">These are my phone recommendations. They are listed in order of price; cheapest first. Taxes and shipping rates are not included in the listed prices.</p>
+        </div>
+        <div id="loading" class="demo-cell mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+          <span class="mdc-typography--body1">Loading...</span>
+        </div>  
+        <!-- cards dynamically added from json via JS -->
+      </div>
+      <p class="mdc-typography--caption">*On sale at time of research.<br>
+      **IP53 is considered splash proof, and are not recommended for submersion. Phones with at least IP6X will withstand submersion for a limited time.</p>
+      <p class="mdc-typography--caption">Last updated: May 4, 2017</p>
+    </main>
+
+    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="scripts/csv-parser.js"></script>
+    <script src="scripts/dialog-creator.js"></script>
+    <script src="scripts/card-creator.js"></script>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+.amazon-store-button {
+  background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Amazon_logo_plain.svg/602px-Amazon_logo_plain.svg.png);
+  background-size: 66px;
+}
+.apple-store-button {
+  background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/170px-Apple_logo_black.svg.png);
+  background-size: 24px;      
+}
+.bestbuy-store-button {
+  background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Best_Buy_Logo.svg/300px-Best_Buy_Logo.svg.png);
+  background-size: 56px;
+}
+.google-store-button {
+  background-image: url(https://upload.wikimedia.org/wikipedia/commons/7/7c/Google_Store_logo_2015.PNG);
+  background-size: 83px;
+}
+.ncix-store-button {
+  background-image: url(https://upload.wikimedia.org/wikipedia/en/3/35/Ncix_logo.jpg);
+  background-size: 75px;
+}
+.oneplus-store-button {
+  background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/OnePlus_logo.svg/300px-OnePlus_logo.svg.png);
+  background-size: 80px;
+}
+.samsung-store-button {
+  background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Samsung_Logo.svg/91px-Samsung_Logo.svg.png);
+  background-size: 70px;
+}
+.htc-store-button {
+  background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/HTC.svg/246px-HTC.svg.png);
+  background-size: 65px;
+}

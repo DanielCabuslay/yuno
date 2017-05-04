@@ -1,0 +1,89 @@
+:root {
+  --mdc-theme-primary: #5c6bc0;
+  --mdc-theme-accent: #ff80ab;
+}
+a {
+  text-decoration: none;
+}
+.demo-body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.demo-main {
+  overflow: auto;
+}
+.demo-card--bg-demo {
+  height: 212px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.demo-card--bg-demo .mdc-card__primary, .demo-card--bg-demo .mdc-card__actions {
+  background: rgba(0, 0, 0, 0.4);
+}
+.phone-image {
+  height: 100px;
+  padding-right: 24px;
+}
+.phone-dialog-header {
+  padding: 0px 24px;
+}
+.phone-dialog-specs-title {
+  display: inline-block;
+  width: 175px;
+  padding: 5px 0px;
+}
+.phone-dialog-specs-title-purchase {
+  padding-top: 20px;
+  padding-bottom: 5px;
+}
+.phone-dialog-specs-spec {
+  display: inline-flex;
+  padding-bottom: 5px;
+}
+.phone-dialog-specs-purchase-buttons {
+  display: inline-block;
+  width: 175px;
+  margin-bottom: 10px;
+}
+.phone-dialog-body {
+  color: black;
+  max-height: 325px;
+  margin-top: 0px;
+}
+.purchase-button {
+  background-repeat: no-repeat;
+  background-position: center;
+}
+@media (max-width: 360px) {
+  .phone-dialog-specs-spec {
+    width: 152px;
+  }
+}
+@media (max-width: 425px) {
+  .phone-dialog-specs-title, .phone-dialog-specs-purchase-buttons {
+  	width: 130px;
+  }
+  .phone-dialog-specs-spec {
+    width: 204px;
+  }
+}
+/*@media (max-width: 1024px) {
+  .mdc-dialog__surface {
+  	max-width: 640px;
+  	min-width: 480px;
+  }
+  .phone-dialog-body {
+  	max-height: 640px;
+  }
+}*/
+@media (min-width: 1024px) {
+  #fab {
+    bottom:2rem;
+    right:3rem;
+  }
+  .phone-dialog-body {
+    max-height: 540px;
+  }
+}
