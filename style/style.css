@@ -1,9 +1,18 @@
 :root {
-  --mdc-theme-primary: #5c6bc0;
-  --mdc-theme-accent: #ff80ab;
+  --mdc-theme-primary: #fafafa;
+  --mdc-theme-primary-light: #ffffff;
+  --mdc-theme-primary-dark: #c7c7c7;
+  --mdc-theme-secondary: #2979ff;
+  --mdc-theme-secondary-light: #75a7ff;
+  --mdc-theme-secondary-dark: #004ecb;
+  --mdc-theme-text-primary-on-primary: #000;
+
 }
 a {
   text-decoration: none;
+}
+.mdc-toolbar__title, .mdc-typography--title, .phone-dialog-specs-title-purchase, .phone-dialog-subheader {
+  color: var(--mdc-theme-secondary);
 }
 .demo-body {
   padding: 0;
@@ -55,6 +64,10 @@ a {
 .purchase-button {
   background-repeat: no-repeat;
   background-position: center;
+  background-color: #fff;
+}
+.caption_section {
+  padding: 24px;
 }
 @media (max-width: 360px) {
   .phone-dialog-specs-spec {
@@ -85,5 +98,20 @@ a {
   }
   .phone-dialog-body {
     max-height: 540px;
+  }
+}
+@media (max-height: 412px) {
+  .phone-dialog-body {
+    max-height: 220px;
+  }
+}
+@media (max-height: 360px) {
+  .phone-dialog-body {
+    max-height: 200px;
+  }
+}
+@media (max-height: 320px) {
+  .phone-dialog-body {
+    max-height: 150px;
   }
 }

@@ -14,6 +14,7 @@ function fetchRecommendations(callback) {
 
 $(document).ready(function() {
 	console.log('ready');
+	var determinate = document.querySelector('.mdc-linear-progress');
 	fetchRecommendations(function(data) {
 		var ids = data[0];
 		var id_data = data[1];
@@ -35,7 +36,11 @@ $(document).ready(function() {
 		    card.addEventListener('mouseleave', function() {
 		      this.classList.remove('mdc-elevation--z8');
 		    });
+		    var linearProgress = mdc.linearProgress.MDCLinearProgress.attachTo(determinate);
+			linearProgress.progress = ind / data.length;
+			// console.log(ind / ids.length);
 		});
+
 	});
 	(function() {
         mdc.dialog.MDCDialog.attachTo(document.querySelector('.mdc-dialog'));

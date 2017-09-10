@@ -46,7 +46,7 @@ function createDialog(id, id_data) {
 	specTitleDiv.className += 'phone-dialog-specs-row';
 
 	var specTitle = document.createElement('div');
-	specTitle.className += 'phone-dialog-specs-title mdc-typography--headline';
+	specTitle.className += 'phone-dialog-specs-title phone-dialog-subheader mdc-typography--body2';
 
 	var title = document.createTextNode('Specs');
 	specTitle.appendChild(title);
@@ -57,7 +57,7 @@ function createDialog(id, id_data) {
 	notesDiv.className += 'phone-dialog-specs-row';
 
 	var notesTitleDiv = document.createElement('div');
-	notesTitleDiv.className += 'phone-dialog-specs-title-purchase mdc-typography--headline';
+	notesTitleDiv.className += 'phone-dialog-specs-title-purchase phone-dialog-subheader mdc-typography--body2';
 
 	var notesTitle = document.createTextNode('Daniel\'s Notes');
 	notesTitleDiv.appendChild(notesTitle);
@@ -74,7 +74,7 @@ function createDialog(id, id_data) {
 	footer.className += 'mdc-dialog__footer';
 
 	var footerButton = document.createElement('button');
-	footerButton.className += 'mdc-button mdc-button--accent mdc-dialog__footer__button mdc-dialog__footer__button--cancel';
+	footerButton.className += 'mdc-button mdc-dialog__footer__button mdc-dialog__footer__button--cancel';
 
 	var footerButtonType = document.createAttribute('type');
 	footerButtonType.value = 'button';
@@ -103,7 +103,7 @@ function createPurchaseRow(section, id_data) {
 
 	//create purchase title
 	var purchaseTitleDiv = document.createElement('div');
-	purchaseTitleDiv.className += 'phone-dialog-specs-title-purchase mdc-typography--headline';
+	purchaseTitleDiv.className += 'phone-dialog-specs-title-purchase phone-dialog-subheader mdc-typography--body2';
  
 	var purchaseTitle = document.createTextNode('Purchase Links');
 	purchaseTitleDiv.appendChild(purchaseTitle);
@@ -240,11 +240,14 @@ function createSpecsRow(section, id_data) {
 				break;
 			case 'Main Camera':
 				var res = id_data['camera_res'] + ' MP';
-				var aperture = 'f/' + id_data['camera_aperture'];
-				if(id_data['camera_aperture'] % 1 == 0) {
-					aperture += '.0';
+				data = [res];
+				if (id_data['camera_aperture'] != null) {
+					var aperture = 'f/' + id_data['camera_aperture'];
+					if(id_data['camera_aperture'] % 1 == 0) {
+						aperture += '.0';
+					}
+					data.push(aperture);
 				}
-				data = [res, aperture];
 
 				if (id_data['camera_stabilization'] == 'O') {
 					data.push('Optical Image Stabilization');
@@ -264,23 +267,32 @@ function createSpecsRow(section, id_data) {
 				addToSpecRowWithBreaks(specRowDiv, specRowTitle, dataDiv, data);
 				break;
 			case 'Secondary Camera':
-				if (id_data['camera2_res'] != null && id_data['camera2_aperture'] != null) {
-					var res = id_data['camera2_res'] + ' MP';
-					var aperture = 'f/' + id_data['camera2_aperture'];
-					if(id_data['camera2_aperture'] % 1 == 0) {
-						aperture += '.0';
+				if (id_data['camera2_res'] != null || id_data['camera2_aperture'] != null) {
+					if (id_data['camera2_res'] != null) {
+						var res = id_data['camera2_res'] + ' MP';
+						data = [res]
+					} 
+					if (id_data['camera2_aperture'] != null) {
+						var aperture = 'f/' + id_data['camera2_aperture'];
+						if(id_data['camera2_aperture'] % 1 == 0) {
+							aperture += '.0';
+						}
+						data.push(aperture);
 					}
-					data = [res, aperture];
+					data.push(id_data['camera2_type']);
 					addToSpecRowWithBreaks(specRowDiv, specRowTitle, dataDiv, data);
 				}
 				break;
 			case 'Front Camera':
 				var res = id_data['camera_f_res'] + ' MP';
-				var aperture = 'f/' + id_data['camera_f_aperture'];
-				if(id_data['camera_f_aperture'] % 1 == 0) {
-					aperture += '.0';
+				data = [res];
+				if (id_data['camera_f_aperture'] != null) {
+					var aperture = 'f/' + id_data['camera_f_aperture'];
+					if(id_data['camera_f_aperture'] % 1 == 0) {
+						aperture += '.0';
+					}
+					data.push(aperture);
 				}
-				data = [res, aperture];
 				addToSpecRowWithBreaks(specRowDiv, specRowTitle, dataDiv, data);
 				break;
 			case 'Water Resistance':

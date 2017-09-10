@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Phones for you</title>
+    <title>Phones Recommendations</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -12,7 +12,7 @@
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="shortcut_icon" href="favicon.png">
     <link rel="manifest" href="manifest.json">
-    <meta name="theme-color" content="#5c6bc0">
+    <meta name="theme-color" content="#fafafa">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -22,24 +22,44 @@
     <div class="mdc-toolbar mdc-toolbar--fixed">
       <div class="mdc-toolbar__row">
         <section class="mdc-toolbar__section mdc-toolbar__section--align-start">
-          <span class="mdc-toolbar__title">Phones for You</span>
+          <span class="mdc-toolbar__title">Phones Recommendations</span>
         </section>
       </div>
     </div>
 
     <main class="demo-main mdc-toolbar-fixed-adjust">
-      <div id="card-grid" class="mdc-layout-grid">
-        <div class="demo-cell mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-          <p class="mdc-typography--body1">These are my phone recommendations. They are listed in order of price; cheapest first. Taxes and shipping rates are not included in the listed prices.</p>
+      <div class="mdc-layout-grid">
+        <div id="card-grid" class="mdc-layout-grid__inner">
+
+          <div class="demo-cell mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+            <p class="mdc-typography--body1">These are my current phone recommendations. They are listed in order of price; cheapest first. Taxes and shipping rates are not included in the listed prices.</p>
+          </div>
+
+          <div id="loading" class="demo-cell mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+            <div role="progressbar" class="mdc-linear-progress mdc-linear-progress--accent">
+              <div class="mdc-linear-progress__buffering-dots"></div>
+              <div class="mdc-linear-progress__buffer"></div>
+              <div class="mdc-linear-progress__bar mdc-linear-progress__primary-bar">
+                <span class="mdc-linear-progress__bar-inner"></span>
+              </div>
+              <div class="mdc-linear-progress__bar mdc-linear-progress__secondary-bar">
+                <span class="mdc-linear-progress__bar-inner"></span>
+              </div>
+            </div>
+            <figcaption class="mdc-typography--body1">Loading...</figcaption>
+          </div> 
+
+          <!-- cards dynamically added from json via JS -->
+
         </div>
-        <div id="loading" class="demo-cell mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-          <span class="mdc-typography--body1">Loading...</span>
-        </div>  
-        <!-- cards dynamically added from json via JS -->
       </div>
-      <p class="mdc-typography--caption">*On sale at time of research.<br>
-      **IP53 is considered splash proof, and are not recommended for submersion. Phones with at least IP6X will withstand submersion for a limited time.</p>
-      <p class="mdc-typography--caption">Last updated: May 4, 2017</p>
+
+      <div class="caption_section">
+        <p class="mdc-typography--caption">*On sale at time of update.<br>
+        **IP53 is considered splash proof, and are not recommended for submersion. Phones with at least IP6X will withstand submersion for a limited time. <a target="_blank" href="https://en.wikipedia.org/wiki/IP_Code">Read more about Ingress Protection here.</a></p>
+        <p class="mdc-typography--caption">Last updated: September 10, 2017</p>
+      </div>
+      
     </main>
 
     <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
@@ -47,5 +67,6 @@
     <script src="scripts/csv-parser.js"></script>
     <script src="scripts/dialog-creator.js"></script>
     <script src="scripts/card-creator.js"></script>
+    
   </body>
 </html>
