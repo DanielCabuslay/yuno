@@ -170,7 +170,7 @@ function createPurchaseRow(section, id_data) {
 }
 
 function createSpecsRow(section, id_data) {
-	var specs = ['Release', 'Processor', 'RAM', 'Storage', 'Battery', 'Fast Charging', 'Display', 'Main Camera', 'Secondary Camera', 'Front Camera', 'Water Resistance'];
+	var specs = ['Release', 'Processor', 'RAM', 'Storage', 'Battery', 'Fast Charging', '3.5mm Jack', 'Display', 'Main Camera', 'Secondary Camera', 'Front Camera', 'Water Resistance'];
 	var storageSizes = ['16', '32', '64', '128', '256'];
 	var specsDivs = [];
 	$.each(specs, function(ind, specTitle) {
@@ -230,6 +230,14 @@ function createSpecsRow(section, id_data) {
 					data = id_data['fast_charging'];
 					addToSpecRow(specRowDiv, specRowTitle, dataDiv, data);
 				}
+				break;
+			case '3.5mm Jack':
+				if (id_data['headphone_jack'] != null) {
+					data = ['Yes'];
+				} else {
+					data = ['No'];
+				}
+				addToSpecRow(specRowDiv, specRowTitle, dataDiv, data);
 				break;
 			case 'Display':
 				var size = id_data['display_size'] + ' inches';
