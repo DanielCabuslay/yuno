@@ -1,18 +1,5 @@
-:root {
-  --mdc-theme-primary: #fafafa;
-  --mdc-theme-primary-light: #ffffff;
-  --mdc-theme-primary-dark: #c7c7c7;
-  --mdc-theme-secondary: #2979ff;
-  --mdc-theme-secondary-light: #75a7ff;
-  --mdc-theme-secondary-dark: #004ecb;
-  --mdc-theme-text-primary-on-primary: #000;
-
-}
 a {
   text-decoration: none;
-}
-.mdc-toolbar__title, .mdc-typography--title, .phone-dialog-specs-title-purchase, .phone-dialog-subheader {
-  color: var(--mdc-theme-secondary);
 }
 .demo-body {
   padding: 0;

@@ -46,7 +46,7 @@ function createDialog(id, id_data) {
 	specTitleDiv.className += 'phone-dialog-specs-row';
 
 	var specTitle = document.createElement('div');
-	specTitle.className += 'phone-dialog-specs-title phone-dialog-subheader mdc-typography--body2';
+	specTitle.className += 'phone-dialog-specs-title phone-dialog-subheader mdc-typography--title';
 
 	var title = document.createTextNode('Specs');
 	specTitle.appendChild(title);
@@ -57,7 +57,7 @@ function createDialog(id, id_data) {
 	notesDiv.className += 'phone-dialog-specs-row';
 
 	var notesTitleDiv = document.createElement('div');
-	notesTitleDiv.className += 'phone-dialog-specs-title-purchase phone-dialog-subheader mdc-typography--body2';
+	notesTitleDiv.className += 'phone-dialog-specs-title-purchase phone-dialog-subheader mdc-typography--title';
 
 	var notesTitle = document.createTextNode('Daniel\'s Notes');
 	notesTitleDiv.appendChild(notesTitle);
@@ -103,7 +103,7 @@ function createPurchaseRow(section, id_data) {
 
 	//create purchase title
 	var purchaseTitleDiv = document.createElement('div');
-	purchaseTitleDiv.className += 'phone-dialog-specs-title-purchase phone-dialog-subheader mdc-typography--body2';
+	purchaseTitleDiv.className += 'phone-dialog-specs-title-purchase phone-dialog-subheader mdc-typography--title';
  
 	var purchaseTitle = document.createTextNode('Purchase Links');
 	purchaseTitleDiv.appendChild(purchaseTitle);
