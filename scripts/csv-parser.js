@@ -1,4 +1,11 @@
 function fetchRecommendations(callback) {
+	var xhr = $.ajax({
+	    url: 'data/phone-data.json',
+	    success: function(response) {
+	        var modifiedDate = xhr.getResponseHeader("Last-Modified");
+	        $('#last_updated').text('Last updated: ' + modifiedDate);
+	    }
+	});
 	var temp = $.getJSON('data/phone-data.json', function(json) {
 		var ids = [];
 		var id_data = [];
