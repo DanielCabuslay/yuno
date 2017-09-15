@@ -1,8 +1,14 @@
 function createCard(id, name, price, release, picture) {
 	var card = document.createElement('div');
 	card.id = id + '-card';
-	card.style.backgroundImage = 'url(' + picture + ')';
-	card.className += 'demo-cell mdc-layout-grid__cell mdc-layout-grid__cell--span-2 mdc-card mdc-card--theme-dark demo-card demo-card--bg-demo mdc-elevation-transition';
+	// card.style.backgroundImage = 'url(' + picture + ')';
+	card.className += 'demo-cell mdc-layout-grid__cell mdc-layout-grid__cell--span-2 mdc-card demo-card demo-card--bg-demo mdc-elevation-transition';
+
+	var media = document.createElement('section');
+	media.className += 'mdc-card__media card-bg';
+	media.style.backgroundImage = 'url(' + picture + ')';
+
+	card.appendChild(media);
 
 	var section = document.createElement('section');
 	section.className += 'mdc-card__primary';
@@ -18,7 +24,7 @@ function createCard(id, name, price, release, picture) {
 	if (price == null) {
 		cardPrice = document.createTextNode(release);
 	} else {
-		cardPrice = document.createTextNode('$' + price + ' • ' + release);
+		cardPrice = document.createTextNode('$' + price);
 	}
 	h2.appendChild(cardPrice);
 

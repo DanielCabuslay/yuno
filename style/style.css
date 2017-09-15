@@ -9,18 +9,16 @@ a {
 .demo-main {
   overflow: auto;
 }
-.demo-card--bg-demo {
+.card-bg {
   height: 212px;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
 }
-.demo-card--bg-demo .mdc-card__primary, .demo-card--bg-demo .mdc-card__actions {
-  background: rgba(0, 0, 0, 0.4);
-}
-.phone-image {
-  height: 100px;
-  padding-right: 24px;
+.mdc-card__title, .mdc-card__subtitle {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 .phone-dialog-header {
   padding: 0px 24px;
