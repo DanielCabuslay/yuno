@@ -9,8 +9,14 @@ a {
 .demo-main {
   overflow: auto;
 }
+.mdc-card {
+  cursor: pointer;
+}
+.mdc-card__primary:last-child {
+  padding-bottom: 16px;
+}
 .card-bg {
-  height: 212px;
+  height: 200px;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
