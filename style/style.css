@@ -55,7 +55,7 @@ a {
 .purchase-button {
   background-repeat: no-repeat;
   background-position: center;
-  background-color: #fff;
+  background-color: #fff!important;
 }
 .caption_section {
   padding: 24px;

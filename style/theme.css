@@ -1,0 +1,9 @@
+:root {
+  --mdc-theme-primary: #00bcd4;
+  --mdc-theme-primary-light: #62efff;
+  --mdc-theme-primary-dark: #008ba3;
+  --mdc-theme-secondary: #ff80ab;
+  --mdc-theme-secondary-light: #ffb2dd;
+  --mdc-theme-secondary-dark: #c94f7c;
+  --mdc-theme-text-primary-on-primary: #000;
+}
