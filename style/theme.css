@@ -7,3 +7,6 @@
   --mdc-theme-secondary-dark: #c94f7c;
   --mdc-theme-text-primary-on-primary: #000;
 }
+html {
+	background-color: #eee;
+}
